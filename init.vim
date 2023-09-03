@@ -1,7 +1,8 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath=&runtimepath
+set runtimepath^="~/.vim/plugged"
+let &packpath = &runtimepath
 source ~/.config/.vimrc
-set nocompatible
+"set nocompatible
+
 
 
 "  ---------------------------------------------------------------------------
@@ -34,6 +35,9 @@ Plug 'godlygeek/tabular'
 " Plug 'zerowidth/vim-copy-as-rtf' "Mac only
 "
 Plug 'mileszs/ack.vim'
+
+"IDE
+Plug 'easymotion/vim-easymotion'
 
 " " Clojure
 " Plug 'neovim/node-host' | Plug 'snoe/nvim-parinfer.js'
@@ -73,6 +77,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 call plug#end()
+
+let mapleader=" "
+nmap <leader>s <Plug>(easymotion-s2)
+
 
 runtime macros/matchit.vim
 
